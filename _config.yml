@@ -4,3 +4,5 @@ description: The Eclipse Foundation - home to a global community, the Eclipse ID
 
 # Build settings
 markdown: kramdown
+
+exclude: [ README.md ]
