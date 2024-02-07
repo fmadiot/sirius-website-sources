@@ -36,10 +36,10 @@ jobs:
           path: ${{ env.WEBSITE_CONTENT_DIR }}
       - name: Setup Ruby
         uses: ruby/setup-ruby@22fdc77bf4148f810455b226c90fb81b5cbc00a7 # v1.171.1
-        working-directory: ${{ env.WEBSITE_SOURCES_DIR }}
         with:
           ruby-version: '3.3'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+          working-directory: ${{ env.WEBSITE_SOURCES_DIR }}
       - name: Prune current content
         working-directory: ${{ env.WEBSITE_CONTENT_DIR }}
         run: git rm -rf *
