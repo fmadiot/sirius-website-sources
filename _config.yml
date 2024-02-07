@@ -1,0 +1,6 @@
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+sirius_baseurl: "/sirius"
+description: The Eclipse Foundation - home to a global community, the Eclipse IDE, Jakarta EE and over 350 open source projects, including runtimes, tools and frameworks
+
+# Build settings
+markdown: kramdown

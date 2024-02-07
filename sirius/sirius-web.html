@@ -1,0 +1,177 @@
+---
+layout: sirius_web
+title: Sirius | Sirius WebHome
+---
+<section id="intro" class="">
+    <div class="container">
+        <div class="row align-items-end">
+            {% include section_intro.html
+                title="Easily create and deploy graphical studios to the web"
+                desc="An open-source <b>low-code</b> platform to define custom <b>web applications</b> supporting your specific <b>visual languages</b>"
+
+                img_href=""
+                img_target="self"
+                img_src="images/sirius-web/siriusweb-visuel1.gif"
+                img_alt="Easily create and deploy studios to the web"
+            %}
+        </div>
+    </div>
+</section>
+<section id="why_sirius_web" class="bg_lightest_grey text-center">
+    <div class="container">
+        <div class="row">
+            {% include block_cols.html
+                col="4"
+                icon_name="fas fa-project-diagram"
+                icon_color="txt_indigo"
+                title="Graphically represent<br>and edit data"
+                desc="Modeling studios defined with Sirius Web support the edition of your DSL with both your specific visual notation and your native domain concepts"
+            %}
+
+            {% include block_cols.html
+                col="4"
+                icon_name="fab fa-html5"
+                icon_color="txt_indigo"
+                title="With a modern<br>cloud-based application"
+                desc="Your studios offer a modern UX and are deployed on a web server running with state-of-the-art technologies: Spring, React, PostgreSQL, GraphQL"
+            %}
+
+            {% include block_cols.html
+                col="4"
+                icon_name="fas fa-power-off"
+                icon_color="txt_indigo"
+                title="Without installation<br>on your desktop"
+                desc="Once deployed on a server, just start your custom studio directly from a web browser, without any specific installation on user's desktop"
+            %}
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+            <iframe style="margin:10px" class="shadow" width="480" height="270" src="https://www.youtube.com/embed/CNS5LEr9QQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+        	<iframe style="margin:10px" class="shadow" width="480" height="270" src="https://www.youtube.com/embed/in6KrDVmWmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	      </div>
+	    </div>
+    </div>
+</section>
+<section id="download" class="text-center">
+    <div class="container">
+        {% include block_heading.html
+            title="Download from Github"
+            sub_title=""
+            desc="<p><b>Sirius Web</b> is a sub-project of Eclipse Sirius. It is <b>open-source</b> and hosted at the <a href=\"http://eclipse.org/\" target=\"_blank\">Eclipse Foundation</a></p>
+        <p>Source code is available on <a href=\"https://github.com/eclipse-sirius/sirius-web\" target=\"_blank\">GitHub</a>. It contains an example application, built using the frontend and backend components.</p>"
+        %}
+        <p><a class="btn btn-default" href="https://github.com/eclipse-sirius/sirius-web" target="_blank">Go to Source Code</a></p>
+    </div>
+</section>
+<section id="features" class="bg_lightest_grey text-center">
+    <div class="container">
+        {% include block_heading.html
+            title="Features"
+            sub_title=""
+            desc=""
+        %}
+    </div>
+</section>
+<section id="features" class="">
+    <div class="container">
+        {% include block_text_video.html
+            txt_order="order-1"
+            title="Shared projects"
+            desc="
+            <p>A project created with Sirius Web contains a set of models. These models can be defined based on the domain models installed on the server.</p>
+            <p>Once created, you can share the project's URL to allow others to simultaneously access and modify its contents.</p>
+            <p>Projects can also be download locally in an open format and re-uploaded later to any other Sirius Web repository.</p>"
+
+            iframe_order="order-2"
+            iframe_src="https://www.youtube.com/embed/oI7ierlTXzA"
+            iframe_width="530"
+            iframe_height="298"
+        %}
+        {% include block_text_video.html
+            txt_order="order-2"
+            title="Assisted Layout"
+            desc="
+            <p>Graphical modeling allows users to better understand complex systems by revealing objects' dependencies (edges and nesting) and visually highlighting properties (images, colors, shapes, sizes).</p>
+            <p>But manually layouting diagram containing dozens of graphical objects to produce highly effective representations can be very tedious.</p>
+            <p>Sirius Web assists the users in layouting diagrams, so that he can concentrate on providing and analysing data, rather than aligning boxes and edges to the pixel.</p>
+            <p>In first versions of Sirius Web, layout is automatic. Different kinds of assisted-layout mechanisms will come progressively.</p>"
+
+            iframe_order="order-1"
+            iframe_src="https://www.youtube.com/embed/lG_h5hC_2ak"
+            iframe_width="530"
+            iframe_height="298"
+        %}
+        {% include block_text_video.html
+            txt_order="order-1"
+            title="Modern UX"
+            desc="
+            <p>Sirius Web is not just a revamping of Sirius Desktop. Relying on a modern technical stack, it implements a new UX design to offer a fluent and intuitive experience adapted to web usages.</p>
+            <p>While recognizing Sirius principles, you will notice many slight changes that make graphical modeling more efficient: less mouse moves, intuitive tools, onboarding process, ...</p>
+            <p>Tools created with Sirius Web can be easily used by end-users with no experience in classic Eclipse workbench.</p>"
+
+            iframe_order="order-2"
+            iframe_src="https://www.youtube.com/embed/VJFfzzAnL5c"
+            iframe_width="530"
+            iframe_height="298"
+        %}
+        {% include block_text_image.html
+            txt_order="order-2"
+            title="Extensibility"
+            desc="
+            <p>Faithful to the principles of Sirius, Sirius Web is designed as an extensible and adaptable web platform. It can fit with your specific context and smoothly integrate with your own web applications.</p>
+            <p>You can add new kinds of representations in Sirius Web, or directly integrate components of Sirius Web (a representation for example) within other applications.</p>"
+
+            img_order="order-1"
+            img_src="images/illustrations/sirius-web-extensibility.png"
+            img_title="Extensibility"
+            img_href="images/sirius-web/brick.png"
+        %}
+    </div>
+</section>
+<section id="support" class="text-center bg_lightest_grey">
+    <div class="container">
+        {% include block_heading.html
+            title="Need Help?"
+            sub_title=""
+            desc=""
+        %}
+
+        <div class="row">
+            {% include block_cols.html
+                col="4"
+                icon_name="fas fa-file-alt"
+                icon_color="txt_indigo"
+                title="Documentation"
+                desc="Learn how to use Sirius Web<br>to implement web-based modeling tools<br>thanks to online user guides."
+                href="http://docs.obeostudio.com/"
+                target="_blank"
+                link_txt="Online Documentation"
+                href_icon="fas fa-arrow-alt-circle-right"
+            %}
+            {% include block_cols.html
+                col="4"
+                icon_name="fas fa-comment"
+                icon_color="txt_indigo"
+                title="Discussions"
+                desc="Find relevant posts/answers.<br>No solution yet to your concern?<br>Come and ask your question."
+                href="https://github.com/eclipse-sirius/sirius-web/discussions"
+                target="_blank"
+                link_txt="Learn more"
+                href_icon="fas fa-arrow-alt-circle-right"
+            %}
+            {% include block_cols.html
+                col="4"
+                icon_name="fas fa-life-ring"
+                icon_color="txt_indigo"
+                title="Professional support"
+                desc="Need expertise or custom development<br>to integrate Sirius Web in your own context?<br>We can help you."
+                href="https://www.obeosoft.com/en/contact"
+                target="_blank"
+                link_txt="Contact Obeo"
+                href_icon="fas fa-arrow-alt-circle-right"
+            %}
+        </div>
+    </div>
+</section>

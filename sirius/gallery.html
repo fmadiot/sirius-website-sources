@@ -1,0 +1,110 @@
+---
+layout: sirius_default
+title: Sirius | Gallery
+---
+<section class="bg_lightest_grey text-center intro">
+    <div class="container">
+            {% include block_heading.html
+                title="What Can You Do with Sirius?"
+                sub_title=""
+                desc="Discover concrete examples of modeling tools created with Sirius for various use-cases:<br>Systems Engineering, Software Development, Business Configuration, etc."
+            %}
+    </div>
+</section>
+
+<div id="usecases"></div>
+<script type="text/javascript">
+      $.getJSON('json/gallery.json', function(data) {
+
+          var output = " " ;
+
+        for (var i in data.usecases) {
+            var medias = " ";
+            var thumb = " ";
+            var thumblist = " ";
+            var title = " ";
+            var author = " ";
+            var descr = " ";
+            var taglist = " ";
+            var tag = " ";
+            var lnklist = " ";
+            var lnk = " ";
+            var infos = " ";
+
+           medias += "<div class='medias' id='" + data.usecases[i].infos.title + "'><div class='popup-gallery-" + i + "'><a href='" + data.usecases[i].medias.mainSrc + "' title='" + data.usecases[i].medias.mainSrc + "'><img class='shadow' src='" + data.usecases[i].medias.mainSrc + "' alt='" + data.usecases[i].medias.imgAlt + "' width='520' /></a></div>";
+
+            if(data.usecases[i].medias.thumbs.length < 1){
+                thumblist += "<div class='thumbs'><ul>";
+            }
+            else {
+            thumblist += "<div class='thumbs popup-gallery-" + i + "'><ul>";
+            for (var t in data.usecases[i].medias.thumbs) {
+                thumb += "<li class='thumb-" + t + "'><a href='" + data.usecases[i].medias.thumbs[t].src + "'><img class='shadow' src='" + data.usecases[i].medias.thumbs[t].src + "' alt='" + data.usecases[i].medias.thumbs[t].src + "' width='60' /></a></li>";
+
+            }
+            }
+        thumblist += thumb + "</ul></div>";
+
+        medias += thumblist + "</div>";
+
+            title += "<div><h2>" + data.usecases[i].infos.title + "</h2></div>";
+            author += "<h6 class='author'>By " + data.usecases[i].infos.author;
+
+            taglist += "&nbsp;<span class='tags taglist'>";
+            for (var j in data.usecases[i].infos.tags) {
+                tag += "<span class='badge bg_indigo txt_white'>" + data.usecases[i].infos.tags[j].nom + "</span>&nbsp;";
+             }
+            taglist += tag + "</span></h6>";
+            descr += "<div class='descr'><p>" + data.usecases[i].infos.description + "</p></div>";
+
+            if(data.usecases[i].infos.lnks.length < 1){
+                    thumblist += "<div class='lnks'><ul>";
+                }
+                else {
+            lnklist += "<div class='lnks'><h5>Related links</h5><ul>";
+                for (var k in data.usecases[i].infos.lnks) {
+                    lnk += "<li><a href='" + data.usecases[i].infos.lnks[k].url + "' target='_blank'>" + data.usecases[i].infos.lnks[k].nom + "</a></li>";
+                }
+                }
+            lnklist += lnk + "</ul></div>";
+
+            infos += "<div class='col-md-6'>" + title + author + taglist + descr + lnklist +"</div>";
+            output += "<section><div class='container'><div class='row usecase'>" + infos + medias + "</div></div></div></section>";
+
+        }
+
+        document.getElementById("usecases").innerHTML=output;
+
+        for (var n in data.usecases) {
+
+            $('.popup-gallery-' + n).magnificPopup({
+                delegate: 'a',
+                type: 'image',
+                tLoading: 'Loading image #%curr%...',
+                mainClass: 'mfp-img-mobile',
+                gallery: {
+                    enabled: true,
+                    navigateByImgClick: true,
+                    preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+                },
+                image: {
+                    tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                    titleSrc: function(item) {
+                        var usecaseIndex = $(item.el).parents(".usecase").index();
+                        return data.usecases[usecaseIndex].infos.title;
+                    }
+                }
+            });
+        }
+      });
+   </script>
+
+<section class="bg_lightest_grey text-center intro">
+    <div class="container">
+            {% include block_heading.html
+                title="Your modeling tool created with Sirius is not listed here?"
+                sub_title=""
+                desc="Feel free to submit your work here: <a href=\"https://bugs.eclipse.org/bugs/show_bug.cgi?id=448492\">Bugzilla 448492</a>."
+            %}
+    </div>
+</section>

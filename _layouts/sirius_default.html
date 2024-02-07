@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  {% include sirius/head.html %}
+  <body>
+    {% include sirius/navbar.html %}
+    {{ content }}
+<footer>
+  <div class="container">
+      <div class="row">    
+        {% include footer_eclipse.html %}
+        {% include sirius/footer.html %}
+    </div>
+  </div>
+</footer>
+  {% include scripts.html %}
+  </body>
+</html>

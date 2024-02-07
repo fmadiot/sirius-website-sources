@@ -1,0 +1,88 @@
+---
+layout: sirius_default
+title: Sirius | Overview
+---
+
+<section>
+    <div class="container">
+
+        {% include block_text_video.html
+            txt_order="order-1"
+            title="What is Sirius?"
+            desc="
+            <p>Sirius is an Eclipse project which allows you to easily create your own graphical modeling workbench by leveraging the Eclipse Modeling technologies, including EMF and GMF.</p>
+            <p>Sirius has been created by Obeo and Thales to provide a generic workbench for model-based architecture engineering that could be easily tailored to fit specific needs.</p>
+            <p>Based on a viewpoint approach, Sirius makes it possible to equip teams who have to deal with complex architectures on specific domains.</p>
+            "
+            lnk_txt="Ckeck out articles and videos "
+            lnk_href="resource-center.html"
+            lnk_target="self"
+            lnk_icon="fas fa-arrow-alt-circle-right"
+
+            iframe_order="order-2"
+            iframe_src="https://www.youtube.com/embed/hyDxSmbSi2g"
+            iframe_width="530"
+            iframe_height="300"
+        %}
+    </div>
+</section>
+
+<section class="bg_lightest_grey">
+    <div class="container">
+        {% include block_text_video.html
+            txt_order="order-2"
+            title="Principles of Sirius"
+            desc="
+            <p>A modeling workbench created with Sirius is composed of a set of Eclipse editors (diagrams, tables and trees) which allow the users to create, edit and visualize EMF models.</p>
+            <p>The editors are defined by a model which defines the complete structure of the modeling workbench, its behavior and all the edition and navigation tools. This description of a Sirius modeling workbench is dynamically interpreted by a runtime within the Eclipse IDE.</p>
+            <p>For supporting specific need for customization, Sirius is extensible in many ways, notably by providing new kinds of representations, new query languages and by being able to call Java code to interact with Eclipse or any other system.</p>
+            "
+            lnk_txt=""
+            lnk_href=""
+            lnk_target="self"
+            lnk_icon=""
+
+            iframe_order="order-1"
+            iframe_src="https://www.youtube.com/embed/SEnfhNl47iA"
+            iframe_width="530"
+            iframe_height="319"
+        %}
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        {% include block_text_image.html
+            txt_order="order-1"
+            title="Example: MBSE Workbench Capella"
+            desc="
+            <p>Thales has developed <a href='https://www.eclipse.org/capella' target='_blank'>Eclipse Capella</a>, a domain specific modeling workbench to equip its system architects.</p>
+            <p>The tool provides several editors to allow the system architects to graphically design and analyze a system according to specific viewpoints. They can evaluate their candidate architectures against industrial constraints (cost & schedule, performance, safety, maintainability, product policy, etc.).</p>
+            <p>Initially developed to target system and software architecture engineering of data processing, signal processing or information systems, Thales successfully applied the tool to larger fields, such as electrical power systems or thermal systems.</p>"
+            lnk_txt="View more examples "
+            lnk_href="gallery.html"
+            lnk_target="self"
+            lnk_icon="fas fa-arrow-alt-circle-right"
+
+            img_order="order-2"
+            img_src="images/screenshots/screenshot_capella.jpg"
+            img_title="Sirius - Example: MBSE Workbench Capella"
+            img_href="images/screenshots/screenshot_capella.jpg"
+        %}
+    </div>
+</section>
+
+<section class="text-center bg_lightest_grey">
+    <div class="container">
+        {% include block_heading.html
+            title="Related Projects"
+            sub_title=""
+            desc=""
+        %}
+        <div class="row">
+            <div class="col-md-12 col-xs-12 vcenter wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms"><a href="http://www.eclipse.org/modeling/emf/" title="Logo Eclipse EMF" target="_blank"><img src="{{  site.sirius_baseurl }}/common_assets/images/logos/logo_emf.jpg"></a></div>
+        </div>
+
+    </div>
+</section>

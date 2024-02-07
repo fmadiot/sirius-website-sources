@@ -1,0 +1,207 @@
+---
+layout: sirius_default
+title: Sirius | Home
+---
+
+<section id="intro" class="">
+    <div class="container">
+        <div class="row align-items-end">
+            {% include section_intro.html
+                title="The easiest way to get your own Modeling Tool"
+                desc="Eclipse Sirius dramatically reduces the time for creating domain-specific modeling workbenches."
+
+                href_1="download.html"
+                btn_txt_1="Download"
+                target_1="self"
+                href_2="overview.html"
+                btn_txt_2="Overview"
+                target_2="self"
+
+                img_href="overview.html"
+                img_target="self"
+                img_src="images/illustrations/sirius-overview.png"
+                img_alt="Some text"
+            %}
+        </div>
+    </div>
+</section>
+
+<section id="why_sirius" class="text-center">
+    <div class="container">
+            {% include block_heading.html
+                title="Why Sirius"
+                sub_title=""
+                desc=""
+            %}
+
+        <div class="row">
+            {% include block_cols.html
+                col="6"
+                icon_name="fas fa-sliders-h"
+                icon_color="txt_indigo"
+                title="Reduce the Tooling Learning Curve"
+                desc="By using a modeling tool which natively supports their own vocabulary, users don't have to learn concepts which are external to their business domain. They just have to learn the views provided by the tool and how to navigate between them. With Sirius, they can rapidly master a new tool and start industrializing their modeling activities."
+            %}
+
+            {% include block_cols.html
+                col="6"
+                icon_name="fas fa-dollar-sign"
+                icon_color="txt_indigo"
+                title="Decrease the Cost of your Tools"
+                desc="Don't pay for overkill tools providing unnecessary functionalities! Sirius is fully Open Source, but most of all, as it is completely customizable, a modeling workbench created with Sirius is natively based on your own business domain and provides the representations and features which really correspond to your different user's needs."
+            %}
+        </div>
+    </div>
+</section>
+
+<section id="sirius_versions" class="bg_indigo txt_white text-center">
+    <div class="container">
+            {% include block_heading.html
+                title="Choose your favorite flavor"
+                sub_title=""
+                desc=""
+            %}
+        <div class="row">
+            {% include block_cols.html
+                col="6"
+                icon_name="fas fa-desktop"
+                icon_color="txt_white"
+                title="Sirius Desktop"
+                desc="Full-featured modeling tools deployed and running<br>in Eclipse workbench on your desktop"
+                href="getstarted.html"
+                link_txt="Get started"
+                href_icon="fas fa-arrow-alt-circle-right"
+            %}
+
+            {% include block_cols.html
+                col="6"
+                icon_name="fas fa-cloud"
+                icon_color="txt_white"
+                title="<span class='badge bg_yellow txt_indigo'>New!</span> Sirius Web"
+                desc="Modern modeling studios deployed to a web server<br> and rendered in a web browser"
+                href="sirius-web.html"
+                link_txt="Learn more"
+                href_icon="fas fa-arrow-alt-circle-right"
+            %}
+        </div>
+    </div>
+</section>
+
+<section id="benefits" class="bg_lightest_grey text-center">
+    <div class="container">
+            {% include block_heading.html
+                title="Benefits"
+                sub_title=""
+                desc=""
+            %}
+
+        <div class="row">
+            {% include block_cols.html
+                col="4"
+                icon_name="far fa-eye"
+                icon_color="txt_indigo"
+                title="Visual"
+                desc="Diagrams, tables and trees"
+            %}
+
+            {% include block_cols.html
+                col="4"
+                icon_name="fas fa-stream"
+                icon_color="txt_indigo"
+                title="Declarative"
+                desc="No code generation"
+            %}
+
+            {% include block_cols.html
+                col="4"
+                icon_name="far fa-clock"
+                icon_color="txt_indigo"
+                title="Easy"
+                desc="Your modeling workbench in hours"
+            %}
+        </div>
+    </div>
+</section>
+
+<section id="complexity_management">
+    <div class="container">
+        {% include block_text_video.html
+            txt_order="order-1"
+            title="Complexity Management"
+            desc="
+            <p>Managing complexity requires breaking down a problem into simpler parts. With its multi-viewpoints approach, Sirius allows the user to easily manipulate sub-parts of a model in order to focus on what really matters. In addition, Sirius provides conditional styles, layers and filters to automatically simplify the graphical representations and highlight the elements of interest.
+            </p>"
+
+            iframe_order="order-2"
+            iframe_src="https://www.youtube.com/embed/XUD4nqIOzLc"
+            iframe_width="510"
+            iframe_height="290"
+        %}
+    </div>
+</section>
+
+<section id="support" class="bg_lightest_grey text-center">
+    <div class="container">
+        {% include block_heading.html
+            title="Need Support?"
+            sub_title=""
+            desc=""
+        %}
+
+    <div class="row">
+        {% include block_cols.html
+            col="4"
+            icon_name="far fa-file-alt"
+            icon_color="txt_indigo"
+            title="Documentation"
+            desc="Learn how to use Sirius, thanks to online complete user guides and reference manuals"
+            href="http://www.eclipse.dev/sirius/doc/"
+            link_txt="Learn more"
+            href_icon="fas fa-arrow-alt-circle-right"
+        %}
+
+        {% include block_cols.html
+            col="4"
+            icon_name="far fa-comment"
+            icon_color="txt_indigo"
+            title="Discussions"
+            desc="Find relevant posts/answers. No solution yet to your concern? Come and ask your question"
+            href="https://github.com/eclipse-sirius/sirius-desktop/discussions"
+            target="_blank"
+            link_txt="Learn more"
+            href_icon="fas fa-arrow-alt-circle-right"
+        %}
+
+        {% include block_cols.html
+            col="4"
+            icon_name="far fa-life-ring"
+            icon_color="txt_indigo"
+            title="Professional support"
+            desc="Obeo, co-leader of Sirius, provides training, expertise, custom development and support plans"
+            href="https://www.obeodesigner.com/en/services"
+            target="_blank"
+            link_txt="Learn more"
+            href_icon="fas fa-arrow-alt-circle-right"
+        %}
+    </div>
+    </div>
+</section>
+
+<section id="sponsors" class="text-center">
+    <div class="container">
+        {% include block_heading.html
+            title="Sponsors"
+            sub_title=""
+            desc=""
+        %}
+        <div class="row align-items-center">
+            <div class="col-md-4 offset-md-2 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                <p><a href="http://www.obeosoft.com" title="Logo Obeo" target="_blank"><img src="{{  site.sirius_baseurl }}/common_assets/images/logos/logo_obeo.png"></a></p>
+            </div>
+            <div class="col-md-4 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+                <p><a href="https://www.thalesgroup.com/en" title="Logo Thales" target="_blank"><img src="{{  site.sirius_baseurl }}/common_assets/images/logos/logo_thales.png"></a></p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
