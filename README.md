@@ -1,6 +1,6 @@
 # Eclipse Srius Website Sources
 
-Sources of the Eclipse Sirius website at https://eclipse.dev/sirius.
+Sources of the [Eclipse Sirius](https://projects.eclipse.org/projects/modeling.sirius) website at https://eclipse.dev/sirius.
 
 This repository contains the [Jekyll](https://jekyllrb.com) templates used to generate the actual content of the Eclipse Sirius website.
 
