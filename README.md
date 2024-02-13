@@ -1,4 +1,4 @@
-# Eclipse Srius Website Sources
+# Eclipse Sirius Website Sources
 
 Sources of the [Eclipse Sirius](https://projects.eclipse.org/projects/modeling.sirius) website at https://eclipse.dev/sirius.
 
