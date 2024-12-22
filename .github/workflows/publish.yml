@@ -35,9 +35,9 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           path: ${{ env.WEBSITE_CONTENT_DIR }}
       - name: Setup Ruby
-        uses: ruby/setup-ruby@22fdc77bf4148f810455b226c90fb81b5cbc00a7 # v1.171.1
+        uses: ruby/setup-ruby@401c19e14f474b54450cd3905bb8b86e2c8509cf # v1.204.0
         with:
-          ruby-version: '3.2.2'
+          ruby-version: '3.3'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           working-directory: ${{ env.WEBSITE_SOURCES_DIR }}
       - name: Prune current content
