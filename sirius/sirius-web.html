@@ -42,17 +42,20 @@ title: Sirius | Sirius WebHome
                 desc="Once deployed on a server, users can launch your custom studio directly from a web browser, with no need for any specific desktop installation"
             %}
         </div>
-        <div class="row">
-          <div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-            <iframe style="margin:10px" class="shadow" width="480" height="270" src="https://www.youtube.com/embed/CNS5LEr9QQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
-        	<iframe style="margin:10px" class="shadow" width="480" height="270" src="https://www.youtube.com/embed/in6KrDVmWmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	      </div>
-	    </div>
+		<div class="row">
+			<div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+			<iframe style="margin:10px" class="shadow" width="480" height="270" src="https://www.youtube.com/embed/CNS5LEr9QQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			<div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+			<iframe style="margin:10px" class="shadow" width="480" height="270" src="https://www.youtube.com/embed/in6KrDVmWmU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div>
+
     </div>
 </section>
-<section id="download" class="bg_indigo text-white text-center">
+
+
+<section id="download" class="bg_lightest_grey text-white text-center">
     <div class="container">
         {% include block_heading.html
             title="Download from Github"
@@ -189,7 +192,74 @@ title: Sirius | Sirius WebHome
     </div>
 </section>
 
-<section id="open-innovation" class="bg_grey">
+<section id="community" class="text-center bg_indigo">
+    <div class="container">
+        {% include block_heading.html
+            title="Community"
+            sub_title=""
+            desc=""
+        %}
+
+		<div class="row txt_white">
+        	<div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+        		<h4>Stay tuned!</h4>
+       			<div class="row">
+
+                    {% include block_cols.html
+                        col="4 offset-md-2"
+                        icon_name="fa fa-linkedin-square"
+                        icon_color="txt_white"
+                        title=""
+                        desc="Connect to<br>Sirius community"
+                        href="https://www.linkedin.com/in/eclipse-sirius/"
+                        link_txt="LinkedIn "
+                        href_icon="fas fa-arrow-alt-circle-right"
+                    %}
+                    {% include block_cols.html
+                        col="4"
+                        icon_name="fa fa-paper-plane"
+                        icon_color="txt_white"
+                        title=""
+                        desc="Receive news<br>about Sirius"
+                        href="https://www.obeosoft.com/en/sirius-mailing-list"
+                        link_txt="Mailing List "
+                        href_icon="fas fa-arrow-alt-circle-right"
+                    %}
+       			</div>
+       		</div>
+        	<div class="col-md-6 col-xs-12 wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="300ms">
+        		<h4>Engage with us!</h4>
+       			<div class="row">
+                    {% include block_cols.html
+                        col="4 offset-md-2"
+                        icon_name="far fa-comments"
+                        icon_color="txt_white"
+                        title=""
+                        desc="Contact Sirius<br>development team"
+                        href="https://github.com/eclipse-sirius/sirius-web/discussions"
+                        link_txt="Forum "
+                        href_icon="fas fa-arrow-alt-circle-right"
+                    %}
+                    {% include block_cols.html
+                        col="4"
+                        icon_name="far fa-user"
+                        icon_color="txt_white"
+                        title=""
+                        desc="Let's discuss<br>your project"
+                        href="https://www.obeosoft.com/en/syson"
+                        target="_blank"
+                        link_txt="Open Innovation "
+                        href_icon="fas fa-arrow-alt-circle-right"
+                    %}
+       			</div>
+       		</div>
+       	</div>
+
+    </div>
+    </div>
+</section>
+
+<section id="community" class="bg_grey">
     <div class="container text-center">
         {% include block_heading.html
             title="Welcome On Board!"
@@ -219,7 +289,7 @@ title: Sirius | Sirius WebHome
             desc="Discover the studios with Sirius Web inside."
         %}
     </div>
-    <div class="container">    
+    <div class="container">
         {% include block_text_image.html
             txt_order="order-1"
             title="Eclipse SysON"
@@ -262,7 +332,7 @@ title: Sirius | Sirius WebHome
     </div>
 </section>
 
-<section id="resources" class="text-center bg_lightest_grey">
+<section id="resources" class="bg_lightest_grey text-center">
     <div class="container">
         {% include block_heading.html
             title="Resources"
@@ -270,86 +340,46 @@ title: Sirius | Sirius WebHome
             desc=""
         %}
 
-        <div class="row">
-            {% include block_cols.html
-                col="3"
-                icon_name="fas fa-file-alt"
-                icon_color="txt_indigo"
-                title="Documentation"
-                desc=""
-                href="http://docs.obeostudio.com/"
+
+		<div class="row">
+			{% include block_cols.html
+				col="4"
+				icon_name="fa fa-youtube-play"
+				icon_color="txt_indigo"
+				title="Videos"
+				desc=""
+				href="https://www.youtube.com/playlist?list=PLDCKzuGIN_Zy1YTEJWo1nvrtHRs-Vwbc6"
+				target="_blank"
+                link_txt="Youtube channel "
+				href_icon="fas fa-arrow-alt-circle-right"
+			%}
+			{% include block_cols.html
+				col="4"
+				icon_name="far fa-newspaper"
+				icon_color="txt_indigo"
+				title="Articles"
+				desc=""
+				href="https://blog.obeo.fr/tags/siriusweb"
+				target="_blank"
+				link_txt="Sirius blog posts "
+				href_icon="fas fa-arrow-alt-circle-right"
+			%}
+			{% include block_cols.html
+				col="4"
+				icon_name="far fa-file-alt"
+				icon_color="txt_indigo"
+				title="Documentation"
+				desc=""
+				href="http://docs.obeostudio.com/"
                 target="_blank"
-                link_txt="Reference Documentation"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
-            {% include block_cols.html
-                col="3"
-                icon_name="fa fa-comments"
-                icon_color="txt_indigo"
-                title="Discussions"
-                desc=""
-                href="https://github.com/eclipse-sirius/sirius-web/discussions"
-                target="_blank"
-                link_txt="Official forum"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
-            {% include block_cols.html
-                col="3"
-                icon_name="fas fa-graduation-cap"
-                icon_color="txt_indigo"
-                title="Training"
-                desc=""
-                href="https://www.obeosoft.com/en/services/training"
-                target="_blank"
-                link_txt="Learn form Experts"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
-            {% include block_cols.html
-                col="3"
-                icon_name="fas fa-life-ring"
-                icon_color="txt_indigo"
-                title="Professional support"
-                desc=""
-                href="https://www.obeosoft.com/en/contact"
-                target="_blank"
-                link_txt="Contact Obeo"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
-        </div>
-        <div class="row"> 
-            {% include block_cols.html
-                col="4"
-                icon_name="fas fa-newspaper"
-                icon_color="txt_indigo"
-                title="Articles"
-                desc=""
-                href="https://blog.obeo.fr/tags/siriusweb"
-                target="_blank"
-                link_txt="Team's Blog"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
-            {% include block_cols.html
-                col="4"
-                icon_name="fas fa-play-circle"
-                icon_color="txt_indigo"
-                title="Videos"
-                desc=""
-                href="https://www.youtube.com/playlist?list=PLDCKzuGIN_Zy1YTEJWo1nvrtHRs-Vwbc6"
-                target="_blank"
-                link_txt="Youtube Playlist"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
-            {% include block_cols.html
-                col="4"
-                icon_name="fas fa-paper-plane"
-                icon_color="txt_indigo"
-                title="Mailing List"
-                desc=""
-                href="https://www.obeosoft.com/en/sirius-mailing-list"
-                target="_blank"
-                link_txt="Receive news by Obeo"
-                href_icon="fas fa-arrow-alt-circle-right"
-            %}
+				link_txt="Sirius documentation "
+				href_icon="fas fa-arrow-alt-circle-right"
+			%}
         </div>
     </div>
 </section>
+
+
+
+
+
