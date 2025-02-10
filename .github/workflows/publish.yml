@@ -23,19 +23,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout templates
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
           path: ${{ env.WEBSITE_SOURCES_DIR }}
       - name: Checkout content website
-        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: ${{ env.WEBSITE_CONTENT_REPO }}
           token: ${{ secrets.GITHUB_TOKEN }}
           path: ${{ env.WEBSITE_CONTENT_DIR }}
       - name: Setup Ruby
-        uses: ruby/setup-ruby@401c19e14f474b54450cd3905bb8b86e2c8509cf # v1.204.0
+        uses: ruby/setup-ruby@d781c1b4ed31764801bfae177617bb0446f5ef8d # v1.218.0
         with:
           ruby-version: '3.3'
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
@@ -64,5 +64,5 @@ jobs:
           git config user.email ${{ github.event.head_commit.author.email }}
           git config -l | grep 'http\..*\.extraheader' | cut -d= -f1 | xargs -L1 git config --unset-all
           git remote set-url origin https://x-access-token:${{ secrets.GH_ACTION_TOKEN }}@github.com/${{ env.WEBSITE_CONTENT_REPO }}
-          git commit -am "${{ github.event.head_commit.message }}"
+          echo ${{ github.event.head_commit.message }} | git commit -am -F-
           git push origin
