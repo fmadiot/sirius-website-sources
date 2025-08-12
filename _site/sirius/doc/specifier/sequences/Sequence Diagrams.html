@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="robots" content="index, follow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Sequence Diagrams">
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1 " />
+        <meta name="description" content="Sequence Diagrams" />
 		<title>Sequence Diagrams</title>
 		<link type="text/css" rel="stylesheet" href="../../resources/bootstrap.css"/>
 		<link type="text/css" rel="stylesheet" href="../../resources/custom.css"/>
@@ -40,6 +40,9 @@
 								<a href="#Message">Message</a>
 							</li>
 							<li>
+								<a href="#Gate">Gate</a>
+							</li>
+							<li>
 								<a href="#SingleEventEndandCompoundEventEnd">SingleEventEnd and CompoundEventEnd</a>
 							</li>
 							<li>
@@ -67,6 +70,9 @@
 							</li>
 							<li>
 								<a href="#InteractionContainer">Interaction Container</a>
+							</li>
+							<li>
+								<a href="#Gate2">Gate</a>
 							</li>
 						</ol>
 					</li>
@@ -200,6 +206,11 @@
 			<code>Message Specification</code>, the message send and receive are defined by one abstract type 
 			<code>Occurrence Specification</code>.
 		</p>
+		<h3 id="Gate">Gate</h3>
+		<p>The gate typically represents a port for message connecting to a sub-component. You can have a gate on a combined fragment, interaction use or interaction container. As messages are connected to MessageEnd model elements, it is the MessageEnd that has a reference to the Gate.</p> 
+		<img border="0" src="images/gate.png"/>
+		<p>You can move a message connected to a gate along from its parent but you can&#8217;t reconnect it to a different gate, nor move it to a different parent and reconnect the gate there. For instance, on the diagram below, it is not possible to move the message from the interaction use ref.1 to ref.2.</p> 
+		<img border="0" src="images/gate_move.png"/>
 		<h3 id="SingleEventEndandCompoundEventEnd">SingleEventEnd and CompoundEventEnd</h3>
 		<p>Sirius internally manages a list of start/finish execution occurrences and sender/receiver message occurrences defined for each interaction. All these occurrences are event ends contained in the 
 			<code>EventEnds</code> list.
@@ -498,6 +509,9 @@
 			</li>
 		</ul> 
 		<img border="0" src="images/basic_message_mapping_visual3.png"/>
+		<p>The properties 
+			<em>Oblique</em> is specific to Basic Messages. It allows the message to be displayed as oblique with source.y &lt; target.y.
+		</p>
 		<h4 id="LostandFoundMessages">Lost and Found Messages</h4>
 		<p>Standard node mappings, direct children of a layer of the current sequence diagram description, can be used to represent the unknown message end. Lost and found messages should be created using a generic tool.</p>
 		<h3 id="InteractionContainer">Interaction Container</h3>
@@ -509,6 +523,13 @@
 		<p>As the interaction container edit part forwards command requests to the sequence diagram edit part, tools that applies on the diagram (like instance role creation) will keep working. Note that in the model operations, the containerView variable will be different though.</p> 
 		<img border="0" src="images/interaction_container_mapping_example.png"/>
 		<p>Only one interaction container mapping can be created.</p>
+		<h3 id="Gate2">Gate</h3>
+		<p>The gate mapping is used for displaying a gate on a combined fragment, interaction use or interaction container.</p>
+		<p>We will define the gate mapping:</p> 
+		<img border="0" src="images/new_gate_mapping.png"/>
+		<p>It is defined like an execution mapping .</p> 
+		<img border="0" src="images/gate_mapping_properties.png"/>
+		<p>Note that there is no reconnect tool for GateMapping. Gates do not reconnect to other parents.</p>
 		<h2 id="tools">Tools</h2>
 		<h3 id="JavaServices">Java Services</h3>
 		<p>To use a java service in an Acceleo expression, service must be define like this in odesign:</p> 
@@ -551,6 +572,27 @@
 			<code>finishingEnd</code> (
 			<code>BehaviorExecution_2_finish</code>) of the new element.
 		</p>
+		<h4 id="GateCreationTool">Gate Creation Tool</h4>
+		<p>A Gate can be created using 
+			<em>Gate Creation Tool</em>. Its specification is similar to the 
+			<em>Execution Creation Tool</em>.
+		</p> 
+		<img border="0" src="images/gate_creation_tool.png"/>
+		<p>The following variables can be used from inside the tool definition:</p>
+		<ul>
+			<li>
+				<code>variable</code>: the element where the tool was applied and that will contain the newly created gate
+			</li>
+			<li>
+				<code>viewVariable</code>: the graphical element where the tool was applied
+			</li>
+			<li>
+				<code>startingEndPredecessor</code> and 
+				<code>finishingEndPredecessor</code>: represent in the global event ends list, the element preceding the new execution start and the element preceding the new execution finish. To get the corresponding semantic end element associated to event end: 
+				<code>startingEndPredecessor.semanticEnd</code> or 
+				<code>finishingEndPredecessor.semanticEnd</code>.
+			</li>
+		</ul>
 		<h4 id="MessageCreationTool">Message Creation Tool</h4>
 		<p>A Message can be created using Message Creation Tool.</p> 
 		<img border="0" src="images/new_message_creation_tool.png"/>
